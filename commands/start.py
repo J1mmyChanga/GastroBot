@@ -14,6 +14,7 @@ async def handle_command_start(message: types.Message):
         [types.KeyboardButton(text='Предложить своё блюдо 🍳🥗🥪')],
         [types.KeyboardButton(text='Написать отзыв о бизнес-ланче 📝')],
         [types.KeyboardButton(text='Голос за блюдо в следующем бизнес-ланче 🌯🌭🍕')],
+        [types.KeyboardButton(text='Хочу получать оповещения о длине очереди 💬')],
     ]
     keyboard = types.ReplyKeyboardMarkup(
         keyboard=kb,
