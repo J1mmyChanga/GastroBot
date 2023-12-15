@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     )
 
     bot_token: str
+    gigachat_token: str
 
 
 settings = Settings()

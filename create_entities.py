@@ -1,15 +1,12 @@
 from aiogram import Bot, Dispatcher
-from aiogram.enums import ParseMode
 
 from config import settings
 from data import *
 
-
 dp = Dispatcher()
 bot = Bot(
-    token=settings.bot_token,
-    #parse_mode=ParseMode.MARKDOWN_V2
+    token=settings.bot_token
 )
 
-global_init('db/ph.db')
+global_init('db/gastro_bot.db')
 session = create_session()

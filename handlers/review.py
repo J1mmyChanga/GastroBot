@@ -1,16 +1,10 @@
-from aiogram import types, F
-from aiogram.filters import Command
+from aiogram import F
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import StatesGroup, State
 from aiogram.utils import markdown
 from create_entities import *
-from misc import *
+from keyboards import *
 
-
-class ReviewState(StatesGroup):
-    lunch = State()
-    review = State()
-
+from states import ReviewState
 
 @dp.message(F.text.lower().startswith('написать отзыв о бизнес-ланче'))
 async def choose_lunch_review_handler(message: types.Message, state: FSMContext):

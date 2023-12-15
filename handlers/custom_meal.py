@@ -1,14 +1,11 @@
-from aiogram import types, F
-from aiogram.filters import Command
+from aiogram import F
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import StatesGroup, State
 from aiogram.utils import markdown
 from create_entities import *
-from misc import *
+from keyboards import *
 
-
-class CustomMealState(StatesGroup):
-    recipe = State()
+from states import CustomMealState
+from utils import nutrits_counter
 
 
 @dp.message(F.text.lower().startswith('предложить своё блюдо'))
@@ -20,7 +17,6 @@ async def custom_meal_handler(message: types.Message, state: FSMContext):
                            '- 🧾 Ваш рецепт отправиться на модерацию на кухню. Там рассмотрят ваше предложение и если рецепт будет одобрен, то он будет учавствовать в голосвании за добавление блюд в бизнес-ланчи в конце месяца. 📋 📊\n',
                            sep = '\n',
                            )
-        # reply_markup=create_custom_meal_keyboard()
     )
 
 
