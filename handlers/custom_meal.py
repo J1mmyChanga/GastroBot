@@ -1,7 +1,7 @@
 from aiogram import F
 from aiogram.fsm.context import FSMContext
 from aiogram.utils import markdown
-from create_entities import *
+from create_entities import dp
 from keyboards import *
 
 from states import CustomMealState
